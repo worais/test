@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define('PLUGIN_DIR', dirname( __FILE__ ));
 require PLUGIN_DIR . "/consts/configs.php";
 require PLUGIN_DIR . "/includes/api.php";
+require PLUGIN_DIR . "/widgets/user.php";
 
 class Plugin{
     public static function install(){
