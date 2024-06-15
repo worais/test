@@ -20,24 +20,26 @@ class User_Config extends WP_Widget {
 	);
 
 	public function widget( $args, $instance ) {
-		echo $args['before_widget'];
+		echo wp_kses( $args['before_widget'], ['div' => []] );
 		if ( ! empty( $instance['title'] ) ) {
-			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
+			echo wp_kses( $args['before_title'], ['h4' => []] );
+            echo esc_html( sanitize_text_field( apply_filters( 'widget_title', $instance['title'] ) ) );
+            echo wp_kses( $args['after_title'], ['h4' => []] );
 		}
 		echo '<div class="textwidget">';
-		echo esc_html__( $instance['text'], 'text_domain' );
+		echo esc_html( sanitize_text_field( $instance['text'] ) );
 		echo '</div>';
-		echo $args['after_widget'];
+		echo wp_kses( $args['after_widget'], ['div' => []] );
 
 		$configs = apply_filters('get_user_config', USER_CONFIGS);
     	foreach(USER_CONFIGS as $key => $default_value){
-			echo "<strong>".esc_html(sanitize_text_field($key))."</strong>: ".esc_html(sanitize_text_field($configs[$key]))."<br />";
+			echo "<strong>".esc_html( sanitize_text_field( $key ) )."</strong>: ".esc_html(sanitize_text_field($configs[$key]))."<br />";
 		}
 	}
 
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'text_domain' );
-		$text  = ! empty( $instance['text'] ) ? $instance['text'] : esc_html__( '', 'text_domain' );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
+		$text  = ! empty( $instance['text'] ) ? $instance['text'] : '';
 		?>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php echo esc_html__( 'Title:', 'text_domain' ); ?></label>
@@ -52,7 +54,7 @@ class User_Config extends WP_Widget {
 
 	public function update( $new_instance, $old_instance ) {
 		$instance          = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? wp_strip_all_tags( $new_instance['title'] ) : '';
 		$instance['text']  = ( ! empty( $new_instance['text'] ) ) ? $new_instance['text'] : '';
 		return $instance;
 	}

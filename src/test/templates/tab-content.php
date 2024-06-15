@@ -20,7 +20,7 @@
     <button type="submit" class="button" id="btn-save">Save</button>
 </form>
 <script>
-var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+var ajaxurl = "<?php echo esc_html( sanitize_text_field( admin_url( 'admin-ajax.php' ) ) ); ?>";
 
 jQuery('#form').submit(function(e){
     const $btn = jQuery('#btn-save');

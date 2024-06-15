@@ -15,8 +15,7 @@ class Api{
             $body = json_decode( wp_remote_retrieve_body( $response ), true );
             return $body;
         } else {
-            $error_message = $response->get_error_message();
-            throw new Exception( $error_message );
+            throw new Exception( 'Error on request API :(' );
         }
 	}    
 }

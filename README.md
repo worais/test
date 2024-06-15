@@ -6,3 +6,6 @@
 ### User config on Widget
 ![image](https://github.com/worais/test/assets/252078/21ecdba5-4b52-4c16-899d-3b70ea86a6f0)
 ![image](https://github.com/worais/test/assets/252078/2eb8247c-fa10-4bfa-b968-31abf64aa682)
+
+### Plugin Check
+![image](https://github.com/worais/test/assets/252078/b5965e67-6c45-4814-9ae6-97245cb0fad4)
