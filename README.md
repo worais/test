@@ -10,8 +10,11 @@
 ### Plugin Check
 ![image](https://github.com/worais/test/assets/252078/b5965e67-6c45-4814-9ae6-97245cb0fad4)
 
-### Phpcs:
+### PhpCS:
 ![image](https://github.com/worais/test/assets/252078/e95b41da-f5b1-4400-8c87-84ccc1c63e3e)
+
+### PhpUnit
+![image](https://github.com/worais/test/assets/252078/6dd73098-944a-4066-836b-cef33c96a43c)
 
 ### CI/CD
 ![image](https://github.com/worais/test/assets/252078/b3555a05-e88a-48ea-80a7-a801b5a23d84)

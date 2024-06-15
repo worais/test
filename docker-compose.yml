@@ -16,6 +16,7 @@ services:
     volumes:     
       - ./src:/var/www/html/wp-content/plugins
       - ./vendor:/var/www/html/vendor
+      - ./tests:/var/www/html/tests
     ports:
       - 80:80
     environment:
