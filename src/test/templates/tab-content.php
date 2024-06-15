@@ -1,10 +1,11 @@
-<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
+<?php if (! defined('ABSPATH') ) { exit;
+} ?>
 <h3>Configs:</h3>
 <form id="form">
     <?php
     $configs = apply_filters('get_user_config', USER_CONFIGS);
     foreach(USER_CONFIGS as $key => $default_value){
-    ?>
+        ?>
         <p class="form-row form-row-wide">
             <label><?php echo esc_html(sanitize_text_field($key)); ?>
             <span class="woocommerce-input-wrapper">
@@ -20,7 +21,7 @@
     <button type="submit" class="button" id="btn-save">Save</button>
 </form>
 <script>
-var ajaxurl = "<?php echo esc_html( sanitize_text_field( admin_url( 'admin-ajax.php' ) ) ); ?>";
+var ajaxurl = "<?php echo esc_html(sanitize_text_field(admin_url('admin-ajax.php'))); ?>";
 
 jQuery('#form').submit(function(e){
     const $btn = jQuery('#btn-save');

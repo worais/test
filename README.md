@@ -9,3 +9,6 @@
 
 ### Plugin Check
 ![image](https://github.com/worais/test/assets/252078/b5965e67-6c45-4814-9ae6-97245cb0fad4)
+
+### Phpcs:
+![image](https://github.com/worais/test/assets/252078/e95b41da-f5b1-4400-8c87-84ccc1c63e3e)

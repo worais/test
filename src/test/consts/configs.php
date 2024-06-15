@@ -1,7 +1,10 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) exit;
+if (! defined('ABSPATH') ) { exit;
+}
 
-define('USER_CONFIGS', [
+define(
+    'USER_CONFIGS', [
     'config1'    => 123,
     'config2'    => 234
-]);
+    ]
+);
