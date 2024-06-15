@@ -15,6 +15,7 @@ services:
       - mysql   
     volumes:     
       - ./src:/var/www/html/wp-content/plugins
+      - ./vendor:/var/www/html/vendor
     ports:
       - 80:80
     environment:
