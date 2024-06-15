@@ -12,3 +12,6 @@
 
 ### Phpcs:
 ![image](https://github.com/worais/test/assets/252078/e95b41da-f5b1-4400-8c87-84ccc1c63e3e)
+
+### CI/CD
+![image](https://github.com/worais/test/assets/252078/b3555a05-e88a-48ea-80a7-a801b5a23d84)

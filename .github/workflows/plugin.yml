@@ -1,0 +1,21 @@
+name: APP
+
+on: push
+
+jobs:
+   lint:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v1
+       - uses: michaelw90/PHP-Lint@master         
+   build:
+     runs-on: ubuntu-latest
+     needs: [lint]     
+
+     steps:
+       - uses: actions/checkout@v2      
+       - run: cd src/ && zip -r ../../test.zip test
+       - uses: actions/upload-artifact@v1
+         with:
+           name: test
+           path: ${{ github.workspace }}/src/
