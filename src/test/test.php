@@ -37,7 +37,7 @@ class Plugin{
     }    
 
     public static function tab_content() {
-        echo "content!";
+        include PLUGIN_DIR . "/templates/tab-content.php";
     }   
 
     public static function get_user_config(){
